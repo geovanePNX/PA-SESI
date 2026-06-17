@@ -4,6 +4,12 @@ $host = "localhost";
 $user = "root";
 $password = "root";
 $database = "aula_sesi";
-$spot = 3307;
+$port = 3307;
+try{
+    $conn = mysqli_connect($host, $user, $password, $port);
+    echo"Conectado com o banco de dados MYSQL.";
+} catch(Exception $e) {
+    echo $e;
+}
 
 ?>
